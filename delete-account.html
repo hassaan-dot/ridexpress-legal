@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Account | Ride Express</title>
+  <meta name="description" content="Request deletion of your Ride Express account and learn what information is deleted or retained.">
+  <meta name="theme-color" content="#0e6b56">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --surface: #ffffff;
+      --ink: #132033;
+      --muted: #4d5b6e;
+      --line: #e4eaf0;
+      --accent: #0e6b56;
+      --accent-dark: #0a5343;
+      --accent-soft: #e7f4f0;
+      --shadow: 0 12px 32px rgba(19, 32, 51, 0.06);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent-dark); }
+
+    a:hover { color: var(--accent); }
+
+    a:focus-visible {
+      outline: 3px solid #b7ddd2;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    ::selection { background: #d5efe7; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner,
+    .footer-inner,
+    .wrap {
+      width: min(800px, calc(100% - 2rem));
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem 1.5rem;
+      flex-wrap: wrap;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+    }
+
+    .brand:hover { color: var(--ink); }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover,
+    .site-nav a[aria-current="page"] {
+      color: var(--accent-dark);
+    }
+
+    .wrap {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      flex: 1;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2.25rem 2.75rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.6rem;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      margin: 2.2rem 0 0.7rem;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    p { margin: 0.75rem 0; }
+
+    ul { margin: 0.6rem 0 0.9rem; padding-left: 1.25rem; }
+
+    li { margin: 0.4rem 0; padding-left: 0.15rem; }
+
+    li::marker { color: var(--accent); }
+
+    .request {
+      margin: 1.5rem 0 0.5rem;
+      padding: 1.35rem 1.25rem 1.4rem;
+      border-radius: 16px;
+      background: var(--accent-soft);
+      border: 1px solid #cfe6de;
+    }
+
+    .request h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.25rem;
+    }
+
+    .request p { margin: 0.55rem 0; }
+
+    p, li { overflow-wrap: break-word; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.85rem;
+      padding: 0.9rem 1.3rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      min-height: 48px;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--accent-dark);
+      color: #fff;
+    }
+
+    .subject {
+      margin: 0.85rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 0.4rem;
+    }
+
+    .box {
+      padding: 1.1rem 1.1rem 0.4rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfcfd;
+    }
+
+    .box h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.08rem;
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem 1.5rem;
+      flex-wrap: wrap;
+      padding: 1.1rem 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner p { margin: 0; }
+
+    .footer-inner nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+    }
+
+    .footer-inner a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-inner a:hover { color: var(--accent-dark); }
+
+    @media (max-width: 680px) {
+      .panel { padding: 1.6rem 1.15rem 1.8rem; }
+      .wrap { margin-top: 1rem; margin-bottom: 2rem; }
+      .header-inner,
+      .footer-inner,
+      .wrap { width: min(800px, calc(100% - 1.5rem)); }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+      }
+      .columns { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .panel, .request, .box { box-shadow: none; }
+      .button { border: 1px solid #132033; color: #132033; background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#0e6b56"/>
+          <path fill="#fff" d="M16 7.2c-3.5 0-6.2 2.7-6.2 6.3 0 4.6 6.2 11.3 6.2 11.3s6.2-6.7 6.2-11.3c0-3.6-2.7-6.3-6.2-6.3zm0 8.4a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6z"/>
+        </svg>
+        Ride Express
+      </a>
+      <nav class="site-nav" aria-label="Legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="delete-account.html" aria-current="page">Delete Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="panel">
+      <p class="eyebrow">Ride Express</p>
+      <h1>Delete your account</h1>
+      <p>You can ask Ride Express to delete the account you use in the Ride Express passenger or driver app. This page explains how to send that request, what you should include, and what happens to your information.</p>
+
+      <section class="request" aria-labelledby="request-heading">
+        <h2 id="request-heading">Request account deletion</h2>
+        <p>To request deletion, email Ride Express at <a href="mailto:admin.contact@ridexpress.co.uk">admin.contact@<wbr>ridexpress.co.uk</a>.</p>
+        <p>Use the button below to open your email app with the message addressed to Ride Express. Send the message from the email address registered on your account whenever you can, so we can match the request to the right account.</p>
+        <a class="button" href="mailto:admin.contact@ridexpress.co.uk?subject=Ride%20Express%20Account%20Deletion%20Request">Request Account Deletion</a>
+        <p class="subject">The message is addressed to admin.contact@<wbr>ridexpress.co.uk with the subject “Ride Express Account Deletion Request”.</p>
+      </section>
+
+      <section id="what-to-include">
+        <h2>What to include</h2>
+        <p>So that Ride Express can find the correct account, include all of the following in your email:</p>
+        <ul>
+          <li>Registered email address</li>
+          <li>Registered phone number</li>
+          <li>Full name</li>
+          <li>A clear statement that you are requesting account deletion</li>
+        </ul>
+      </section>
+
+      <section id="verification">
+        <h2>Account verification</h2>
+        <p>Ride Express may verify account ownership before processing the request. We do this so that an account is not deleted because of a request from someone else. We may ask you to confirm details that match the account, or to reply from the registered email address, before the deletion goes ahead.</p>
+      </section>
+
+      <div class="columns">
+        <section class="box" id="what-is-deleted">
+          <h2>What is deleted or anonymised</h2>
+          <p>When a verified deletion request is completed, Ride Express generally deletes or anonymises:</p>
+          <ul>
+            <li>User profile information</li>
+            <li>Contact information</li>
+            <li>Account authentication information</li>
+            <li>Saved account information</li>
+            <li>Personal location information where it is no longer required</li>
+          </ul>
+        </section>
+
+        <section class="box" id="what-may-be-retained">
+          <h2>What may be retained</h2>
+          <p>Certain information may be retained when required or permitted by law, or when it is necessary for legitimate purposes, such as:</p>
+          <ul>
+            <li>Financial and transaction records</li>
+            <li>Fraud prevention</li>
+            <li>Dispute resolution</li>
+            <li>Legal or regulatory obligations</li>
+            <li>Establishing, exercising, or defending legal claims</li>
+          </ul>
+        </section>
+      </div>
+
+      <section id="retention-limits">
+        <h2>How long retained information is kept</h2>
+        <p>Information that is retained is limited to what is needed for the applicable purpose. Ride Express deletes or anonymises that information when the retention requirement ends.</p>
+      </section>
+
+      <section id="partial-requests">
+        <h2>Removing specific information</h2>
+        <p>If you want specific data removed without deleting your entire account, contact Ride Express at <a href="mailto:admin.contact@ridexpress.co.uk">admin.contact@<wbr>ridexpress.co.uk</a> and describe your request. Tell us what you want removed and the email address or phone number on the account. We will let you know what can be removed and what, if anything, must be kept for the reasons described above.</p>
+      </section>
+
+      <section id="privacy">
+        <h2>Privacy Policy</h2>
+        <p>More detail about the information Ride Express collects and how it is used is in the <a href="privacy-policy.html">Ride Express Privacy Policy</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Ride Express</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Legal</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="delete-account.html" aria-current="page">Delete Account</a>
+        <a href="mailto:admin.contact@ridexpress.co.uk">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

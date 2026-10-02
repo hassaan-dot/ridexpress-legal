@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Ride Express</title>
+  <meta name="description" content="Privacy Policy for the Ride Express passenger and driver mobile applications.">
+  <meta name="theme-color" content="#0e6b56">
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --surface: #ffffff;
+      --ink: #132033;
+      --muted: #4d5b6e;
+      --line: #e4eaf0;
+      --accent: #0e6b56;
+      --accent-dark: #0a5343;
+      --accent-soft: #e7f4f0;
+      --shadow: 0 12px 32px rgba(19, 32, 51, 0.06);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent-dark); }
+
+    a:hover { color: var(--accent); }
+
+    a:focus-visible {
+      outline: 3px solid #b7ddd2;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    ::selection { background: #d5efe7; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner,
+    .footer-inner,
+    .wrap {
+      width: min(800px, calc(100% - 2rem));
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem 1.5rem;
+      flex-wrap: wrap;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+    }
+
+    .brand:hover { color: var(--ink); }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover,
+    .site-nav a[aria-current="page"] {
+      color: var(--accent-dark);
+    }
+
+    .wrap {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      flex: 1;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2.25rem 2.75rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.6rem;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .updated {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .lede { margin: 0 0 1rem; }
+
+    h2 {
+      margin: 2.4rem 0 0.7rem;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 1.45rem 0 0.35rem;
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    p { margin: 0.75rem 0; }
+
+    ul, ol { margin: 0.6rem 0 0.9rem; padding-left: 1.25rem; }
+
+    li { margin: 0.35rem 0; padding-left: 0.15rem; }
+
+    li::marker { color: var(--accent); }
+
+    .toc {
+      margin: 1.5rem 0 0.25rem;
+      padding: 1.1rem 1.2rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfcfd;
+    }
+
+    .toc h2 {
+      margin: 0 0 0.55rem;
+      font-size: 0.95rem;
+    }
+
+    .toc ol {
+      margin: 0;
+      columns: 2;
+      column-gap: 1.5rem;
+    }
+
+    .toc a { text-decoration: none; font-size: 0.95rem; }
+
+    .toc a:hover { text-decoration: underline; }
+
+    .note {
+      margin: 1rem 0;
+      padding: 0.95rem 1rem;
+      border-radius: 12px;
+      background: var(--accent-soft);
+    }
+
+    .note p { margin: 0.45rem 0; }
+
+    .note p:first-child { margin-top: 0; }
+
+    .note p:last-child { margin-bottom: 0; }
+
+    address { font-style: normal; }
+
+    p, li, address { overflow-wrap: break-word; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.4rem;
+      padding: 0.75rem 1.1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      min-height: 44px;
+    }
+
+    .button:hover { background: var(--accent-dark); color: #fff; }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem 1.5rem;
+      flex-wrap: wrap;
+      padding: 1.1rem 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner p { margin: 0; }
+
+    .footer-inner nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+    }
+
+    .footer-inner a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-inner a:hover { color: var(--accent-dark); }
+
+    @media (max-width: 680px) {
+      .panel { padding: 1.6rem 1.15rem 1.8rem; }
+      .wrap { margin-top: 1rem; margin-bottom: 2rem; }
+      .header-inner,
+      .footer-inner,
+      .wrap { width: min(800px, calc(100% - 1.5rem)); }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+      }
+      .toc ol { columns: 1; }
+      .button { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .site-header, .site-footer, .toc { display: none; }
+      .panel { border: 0; box-shadow: none; padding: 0; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#0e6b56"/>
+          <path fill="#fff" d="M16 7.2c-3.5 0-6.2 2.7-6.2 6.3 0 4.6 6.2 11.3 6.2 11.3s6.2-6.7 6.2-11.3c0-3.6-2.7-6.3-6.2-6.3zm0 8.4a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6z"/>
+        </svg>
+        Ride Express
+      </a>
+      <nav class="site-nav" aria-label="Legal">
+        <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+        <a href="delete-account.html">Delete Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="panel">
+      <p class="eyebrow">Ride Express</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: <time datetime="2026-10-02">2 October 2026</time></p>
+
+      <p class="lede">This Privacy Policy explains how Ride Express collects, uses, shares, and protects information when you use the Ride Express passenger and driver mobile applications (the “Apps”).</p>
+      <p>Ride Express provides ride services that connect passengers and drivers. This policy applies to people who use either App. It describes the information the Apps handle and the choices you can make about that information.</p>
+
+      <nav class="toc" aria-label="Contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#information-we-collect">Information we collect</a></li>
+          <li><a href="#how-we-collect">How information is collected</a></li>
+          <li><a href="#how-we-use">How information is used</a></li>
+          <li><a href="#location-usage">Location usage</a></li>
+          <li><a href="#payment-processing">Payment processing</a></li>
+          <li><a href="#third-party-services">Third-party services</a></li>
+          <li><a href="#data-sharing">Data sharing</a></li>
+          <li><a href="#data-security">Data security</a></li>
+          <li><a href="#data-retention">Data retention</a></li>
+          <li><a href="#account-deletion">Account deletion</a></li>
+          <li><a href="#your-choices">Your choices and permissions</a></li>
+          <li><a href="#childrens-privacy">Children’s privacy</a></li>
+          <li><a href="#changes">Changes to this Privacy Policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <section id="information-we-collect">
+        <h2>Information we collect</h2>
+        <p>Ride Express collects information you provide, information created when you use the Apps, and limited technical information from your device. The categories below describe the information the passenger and driver Apps may handle.</p>
+
+        <h3 id="account-profile">Account and profile information</h3>
+        <p>When you create or update an account, we collect the profile details needed to set up and maintain that account. This may include the information you add to your profile so that Ride Express can identify you and provide the service.</p>
+
+        <h3 id="name-email-phone">Name, email address, and phone number</h3>
+        <p>We collect your name, email address, and phone number. We use them to register your account, contact you about rides and your account, and respond when you get in touch with us.</p>
+
+        <h3 id="authentication">Authentication information</h3>
+        <p>We collect information used to sign you in and protect your account. This may include login credentials and related authentication data, such as verification or session information. We use it to confirm that it is you accessing the account and to reduce the risk of unauthorised access.</p>
+
+        <h3 id="location-information">Location information</h3>
+        <p>If you allow location access, the Apps may collect your device location. That can include your approximate or precise position while you use Ride Express, including when you request a ride, travel to a pickup, or take part in an active ride.</p>
+
+        <h3 id="pickup-destination">Pickup and destination information</h3>
+        <p>When a ride is requested or accepted, we collect the pickup and destination details that are entered or confirmed. This may include addresses, place names, and related map coordinates. We use this information to arrange the ride and help the driver and passenger meet.</p>
+
+        <h3 id="ride-booking">Ride and booking information</h3>
+        <p>We collect information about rides and bookings, such as the time of a request, ride status, route details associated with the trip, and related ride history. We use these records to provide the service and to deal with questions about a trip.</p>
+
+        <h3 id="driver-passenger">Driver and passenger information</h3>
+        <p>To complete a ride, Ride Express uses limited information about the driver and the passenger involved in that ride. This may include a name, pickup and destination details, trip status, and the location needed for those two people to meet and finish the journey.</p>
+
+        <h3 id="payment-information">Payment and transaction information</h3>
+        <p>When a payment is made through the Apps, we may collect transaction details such as the amount, date, payment status, and a reference provided in connection with the payment. We use this information to confirm the transaction and keep a record of it. Complete payment card details are handled as described in <a href="#payment-processing">Payment processing</a>.</p>
+
+        <h3 id="device-information">Device and technical information</h3>
+        <p>We may collect technical information from the device you use, such as the device type, operating system, app version, language, and log data needed to operate and secure the Apps. This may include an IP address where it is part of those technical logs. We use this information to deliver the Apps, diagnose problems, and protect accounts.</p>
+
+        <h3 id="push-notifications">Push notifications</h3>
+        <p>If you allow notifications, we collect and use the information needed to send push notifications to your device. Notifications may cover ride status, account activity, and other service messages. You can turn notifications off in your device settings. The Apps can still be used, but you may miss updates about a ride.</p>
+
+        <h3 id="customer-support">Customer support information</h3>
+        <p>If you contact Ride Express for help, we collect the information you send, including your message, your contact details, and the details of the issue. We use it to respond, look into the request, and keep a record of the support conversation.</p>
+      </section>
+
+      <section id="how-we-collect">
+        <h2>How information is collected</h2>
+        <p>Ride Express collects information in these ways:</p>
+        <ul>
+          <li>Directly from you, when you create an account, update your profile, request or accept a ride, enter a pickup or destination, make a payment, or contact support.</li>
+          <li>From your device while you use the Apps, including location where you have allowed it, and device and technical information.</li>
+          <li>From the other person on a ride, where a driver and a passenger need to exchange limited details so the ride can take place.</li>
+          <li>From service providers that support the Apps, such as a payment provider confirming the status of a transaction.</li>
+        </ul>
+      </section>
+
+      <section id="how-we-use">
+        <h2>How information is used</h2>
+        <p>Ride Express uses information to run the passenger and driver Apps and to keep them reliable. In particular, we use information to:</p>
+        <ul>
+          <li>Create and manage passenger and driver accounts</li>
+          <li>Authenticate users and protect accounts</li>
+          <li>Match passengers and drivers and operate rides</li>
+          <li>Provide pickup, destination, navigation, and active-ride features</li>
+          <li>Process payments and keep transaction records</li>
+          <li>Send ride updates and other service notifications you have allowed</li>
+          <li>Provide customer support</li>
+          <li>Maintain the safety, security, and reliability of the Apps</li>
+          <li>Detect and prevent fraud, misuse, and unauthorised access</li>
+          <li>Meet legal obligations and respond to lawful requests</li>
+        </ul>
+      </section>
+
+      <section id="location-usage">
+        <h2>Location usage</h2>
+        <div class="note">
+          <p>Ride Express may use location information to provide ride matching, pickup, destination, navigation, active ride, and driver-related functionality.</p>
+        </div>
+        <p>Location is used so that rides can be arranged and carried out. Depending on the feature and the permissions you have given, this can include:</p>
+        <ul>
+          <li>Matching a passenger with a driver</li>
+          <li>Setting or confirming a pickup point</li>
+          <li>Showing a destination and supporting the route</li>
+          <li>Supporting navigation during a trip</li>
+          <li>Showing the progress of an active ride</li>
+          <li>Giving a driver the location information needed to collect a passenger and complete the trip</li>
+        </ul>
+        <p>Location is used when your device and the Apps have permission to access it. You can refuse or withdraw location permission in your device settings. Features that depend on location, including matching, pickup, and live trip progress, may then be limited or unavailable.</p>
+      </section>
+
+      <section id="payment-processing">
+        <h2>Payment processing</h2>
+        <p>Payment information may be processed by third-party payment providers. Those providers collect the payment details needed to complete a transaction and handle that information under their own terms and privacy practices.</p>
+        <div class="note">
+          <p>Ride Express does not need to store complete payment card details when the payment provider handles the transaction. We may receive and keep limited transaction information, such as the amount, date, status, and a payment reference, so the ride payment can be confirmed and recorded.</p>
+        </div>
+      </section>
+
+      <section id="third-party-services">
+        <h2>Third-party services</h2>
+        <p>Ride Express uses third-party services to operate the Apps. These services may support activities such as hosting, payment processing, maps and location features, push notifications, and customer communications.</p>
+        <p>Providers receive the information needed to perform the relevant service. A provider that collects information directly from you, for example a payment provider collecting card details, handles that information under its own privacy notice. Ride Express does not control those independent collection practices.</p>
+      </section>
+
+      <section id="data-sharing">
+        <h2>Data sharing</h2>
+        <p>Ride Express does not sell your personal information. We share information only as needed for the purposes below:</p>
+        <ul>
+          <li>With the driver or passenger on a particular ride, so that the ride can be identified and completed. Shared details are limited to what is needed for that trip, such as a name, pickup and destination, trip status, and relevant location.</li>
+          <li>With service providers that process information for Ride Express, including providers that support hosting, payments, maps, notifications, or communications.</li>
+          <li>Where sharing is required by law, regulation, legal process, or a lawful request.</li>
+          <li>Where sharing is needed to protect the rights, safety, and security of Ride Express, our users, or other people, including to investigate fraud or misuse.</li>
+          <li>If Ride Express is involved in a business transfer, such as a merger or a sale of assets. In that case, the recipient will be required to handle personal information in line with this policy.</li>
+        </ul>
+      </section>
+
+      <section id="data-security">
+        <h2>Data security</h2>
+        <p>Ride Express uses reasonable administrative, technical, and organisational measures designed to protect information against unauthorised access, loss, misuse, and alteration. Access to personal information is limited to people and providers who need it to operate the service.</p>
+        <p>No method of sending or storing information is completely secure. Please keep your login details private and contact us if you believe your account has been accessed without permission.</p>
+      </section>
+
+      <section id="data-retention">
+        <h2>Data retention</h2>
+        <p>Ride Express keeps personal information for as long as it is needed for the purposes described in this policy, including to provide the Apps, keep records of rides and payments, resolve disputes, and meet legal obligations.</p>
+        <p>When information is no longer needed for those purposes, we delete it or anonymise it. Some information may be kept for longer where the law requires or permits that, or where it is necessary for a legitimate purpose. Those cases are described in <a href="#account-deletion">Account deletion</a>. Retained information is limited to the relevant purpose and is deleted or anonymised when that requirement ends.</p>
+      </section>
+
+      <section id="account-deletion">
+        <h2>Account deletion</h2>
+        <p>You can ask Ride Express to delete your account. After a request is verified and completed, we delete or anonymise the personal information associated with the account, except where certain information must be kept.</p>
+        <p>Information that is generally deleted or anonymised includes your profile, contact details, authentication information, saved account information, and personal location information where it is no longer required. Some records may be retained where the law requires or permits it, or where retention is necessary for a legitimate purpose such as financial and transaction records, fraud prevention, dispute resolution, legal or regulatory obligations, or establishing, exercising, or defending legal claims.</p>
+        <p>The steps to submit a request, and a fuller explanation of what is deleted and what may be kept, are on the Account Deletion page.</p>
+        <p><a class="button" href="delete-account.html">Go to Account Deletion</a></p>
+        <p>If you want specific information removed without deleting your entire account, contact Ride Express and describe the request. We will explain what can be removed and what, if anything, must be kept for the reasons above.</p>
+      </section>
+
+      <section id="your-choices">
+        <h2>Your choices and permissions</h2>
+        <p>You can control how Ride Express uses certain information:</p>
+        <ul>
+          <li><strong>Account details.</strong> You may update profile information in the Apps where editing is available, or contact us if something needs to be corrected.</li>
+          <li><strong>Location.</strong> You can allow, refuse, or withdraw location access in your device settings. Ride matching, pickup, navigation, and active-ride features may not work without it.</li>
+          <li><strong>Push notifications.</strong> You can allow or turn off notifications in your device settings.</li>
+          <li><strong>Account deletion.</strong> You can request deletion of your account on the <a href="delete-account.html">Account Deletion</a> page.</li>
+          <li><strong>Specific information.</strong> You can contact us to ask about the information linked to your account, or to ask for particular information to be removed without closing the whole account.</li>
+        </ul>
+      </section>
+
+      <section id="childrens-privacy">
+        <h2>Children’s privacy</h2>
+        <p>The Ride Express Apps are not directed to children. Ride Express does not knowingly collect personal information from children. If you believe a child has provided personal information through the Apps, contact us and we will take steps to delete it.</p>
+      </section>
+
+      <section id="changes">
+        <h2>Changes to this Privacy Policy</h2>
+        <p>Ride Express may update this Privacy Policy from time to time. When we do, we will change the “Last updated” date at the top of this page. If a change materially affects how personal information is handled, we will take reasonable steps to draw it to your attention, such as a notice in the Apps or a message to the email address on your account.</p>
+        <p>The policy posted on this page is the current version. Please review it when you use the Apps so that you understand how your information is handled.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Questions about this Privacy Policy, your information, or a deletion request can be sent to Ride Express at:</p>
+        <address>
+          <a href="mailto:admin.contact@ridexpress.co.uk">admin.contact@<wbr>ridexpress.co.uk</a>
+        </address>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Ride Express</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Legal</a>
+        <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+        <a href="delete-account.html">Delete Account</a>
+        <a href="mailto:admin.contact@ridexpress.co.uk">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
